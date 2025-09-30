@@ -11,7 +11,7 @@
         android:id="@+id/tv_v_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/design_default_color_primary"
+        android:background="?attr/colorPrimary"
         android:paddingLeft="8dp"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
@@ -30,6 +30,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Red: 255"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_v_title" />
@@ -41,7 +42,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:progress="100"
+        android:max="255"
+        android:progress="255"
+        android:progressTint="@color/design_default_color_secondary"
+        android:thumbTint="@color/design_default_color_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_v_red" />
@@ -53,6 +57,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Green: 255"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sb_v_red" />
@@ -64,7 +69,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:progress="100"
+        android:max="255"
+        android:progress="255"
+        android:progressTint="@color/design_default_color_secondary"
+        android:thumbTint="@color/design_default_color_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_v_green" />
@@ -76,6 +84,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Blue: 255"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sb_v_green" />
@@ -87,7 +96,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:progress="100"
+        android:max="255"
+        android:progress="255"
+        android:progressTint="@color/design_default_color_secondary"
+        android:thumbTint="@color/design_default_color_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_v_blue" />
@@ -98,7 +110,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Hex Representation: #FFFFFF"
+        android:text="Hex Representation: FFFFFF"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sb_v_blue" />
@@ -110,7 +123,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="?attr/colorPrimary"
         android:text="SAVE COLOR"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_v_hex" />

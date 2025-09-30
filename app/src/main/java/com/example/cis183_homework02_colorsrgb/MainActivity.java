@@ -1,4 +1,10 @@
-    package com.example.cis183_homework02_colorsrgb;
+//====================================================================================================
+//Author        :       Marc McLennan
+//Date          :       09-30-2025
+//Description   :       CIS183 Homework #2, Program #1; RGB Color Selector
+//====================================================================================================
+
+package com.example.cis183_homework02_colorsrgb;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -32,7 +38,6 @@ import java.util.ArrayList;
         TextView tv_j_hex;
         Button btn_j_save;
         ListView lv_j_colors;
-        String[] test = {"Hello", "Hi", "Hola"};
 
         private boolean textColorChanged = false;
         private ColorInfo currentColor;
@@ -141,6 +146,7 @@ import java.util.ArrayList;
             public void onClick(View v) {
                 ColorInfo colorToAppend = new ColorInfo(sb_j_red.getProgress(), sb_j_green.getProgress(), sb_j_blue.getProgress());
                 listOfColors.add(colorToAppend);
+                //need to call this so it actually changes on-screen
                 clAdapter.notifyDataSetChanged();
                 resetInfo(255, 255, 255);
             }
@@ -150,7 +156,7 @@ import java.util.ArrayList;
         lv_j_colors.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //casts the selected object in the list view to ColorInfo
+                //casts the selected listview object to ColorInfo
                 ColorInfo selectedColor = (ColorInfo) parent.getItemAtPosition(position);
                 main.setBackgroundColor(Color.rgb(selectedColor.getRed(), selectedColor.getGreen(), selectedColor.getBlue()));
                 resetInfo(selectedColor.getRed(), selectedColor.getGreen(), selectedColor.getBlue());
@@ -165,6 +171,8 @@ import java.util.ArrayList;
 
         main.setBackgroundColor(Color.rgb(r, g, b));
 
+        //controls when to change the color of the text that is in front of the background
+        //values picked based on when the text was still easy to read
         if((g < 120 && r < 130 && b < 180) && !textColorChanged) {
             tv_j_red.setTextColor(Color.WHITE);
             tv_j_green.setTextColor(Color.WHITE);
